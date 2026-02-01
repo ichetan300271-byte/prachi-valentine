@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Open at Your Own Risk 💘</title>
+<style>
+body {
+margin: 0;
+height: 100vh;
+font-family: Arial, sans-serif;
+background: black;
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+.hidden {
+display: none;
+}
+
+button {
+padding: 12px 25px;
+font-size: 18px;
+margin: 10px;
+cursor: pointer;
+border: none;
+border-radius: 6px;
+}
+
+.danger {
+background: red;
+color: white;
+}
+
+.love {
+background: hotpink;
+color: white;
+}
+</style>
+</head>
+<body>
+
+<div id="warning">
+<h1>⚠️ WARNING ⚠️</h1>
+<p>This website contains<br><b>dangerous amounts of love</b></p>
+<p>Only proceed if your name is <b>Prachi</b> 💕</p>
+<button class="danger" onclick="enterLove()">I’m Prachi ❤️</button>
+<button onclick="alert('Nice try 😌')">Exit</button>
+</div>
+
+<div id="love" class="hidden">
+<h1>Hi Prachi 💖</h1>
+<p>I made this just for you.</p>
+<p>You make my world brighter every day 🌸</p>
+<h2>Will you be my Valentine? 💌</h2>
+<button class="love" onclick="yes()">YES 😍</button>
+</div>
+
+<script>
+function enterLove() {
+document.getElementById("warning").classList.add("hidden");
+document.getElementById("love").classList.remove("hidden");
+}
+
+function yes() {
+document.body.innerHTML = "<h1>YAY 💕💕<br>Happy Valentine’s Day Prachi 🌹</h1>";
+}
+</script>
+
+</body>
+</html>
